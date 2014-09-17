@@ -1,19 +1,30 @@
-//aca en el require me da error como que falta definir algo 
+// Filename: main.js
 require.config({
+  //urlArgs: "bust=" +  (new Date()).getTime(),
+ 
+  baseUrl: "js",
+
   paths: {
-    jquery: 'home/valentina/tutorialbb/js/libs/jquery/jquery',
-    underscore: 'home/valentina/tutorialbb/js/libs/underscore/underscore',
-    backbone: 'home/valentina/tutorialbb/js/libs/backbone/backbone'
-  }
+    jquery: 'libs/bower_components/jquery/dist/jquery',
+    modernizr: '/libs/bower_components/modernizr/modernizr',
+    underscore: '/libs/bower_components/underscore/underscore',
+    backbone: '/libs/bower_components/backbone/backbone',
+    bootstrap: 'libs/bower_components/bootstrap/dist/js/bootstrap',
+    a: 'model/a',
+    b: 'model/b'    
+   }   
 
 });
+require(['jquery','a'], function($,item){  
+  item.setName("RequireJS for loading");
+  console.log("Cargo A");
+  $('#resultado').html(item.getName()+"<br>");
+  
+  require(['b'], function(b){
+    b.setName("Soy B");
+    console.log("Cargo B");
+    $('#resultado').append(item.getName());
 
-require([
+  });
 
-  // Load our app module and pass it to our definition function
-  'home/valentina/tutorialbb/app',
-], function(App){
-  // The "app" dependency is passed in as "App"
-  App.initialize();
-  App.listen(8080);
 });

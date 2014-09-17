@@ -1,8 +1,9 @@
-define(['modernizr'],function(modernizr){
+define(['a'],function(a){
 	return {
 		name : '',
 		quotes : [], 
 		setName : function(n){
+			a.setName("Seteado desde B");
 			name = n;
 		},
 		getName : function(){

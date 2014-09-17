@@ -1,4 +1,4 @@
-define(['modernizr'],function(modernizr){
+define(function(){
 	return {
 		name : '',
 		quotes : [], 
