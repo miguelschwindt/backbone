@@ -1,7 +1,8 @@
 define(function(){
+
 	return {
 		name : '',
-		quotes : [], 
+		quotes : [],
 		setName : function(n){
 			name = n;
 		},
@@ -16,3 +17,5 @@ define(function(){
 		}
 	}
 });
+
+

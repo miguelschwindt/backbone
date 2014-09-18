@@ -5,13 +5,13 @@ require.config({
   baseUrl: "js",
 
   paths: {
-    jquery: 'libs/bower_components/jquery/dist/jquery',
-    modernizr: '/libs/bower_components/modernizr/modernizr',
-    underscore: '/libs/bower_components/underscore/underscore',
-    backbone: '/libs/bower_components/backbone/backbone',
-    bootstrap: 'libs/bower_components/bootstrap/dist/js/bootstrap',
-    a: 'model/a',
-    b: 'model/b'    
+    jquery: 'libs/jquery/dist/jquery',
+    modernizr: 'libs/modernizr/modernizr',
+    underscore: 'libs/underscore/underscore',
+    backbone: 'libs/backbone/backbone',
+    bootstrap: 'libs/bootstrap/dist/js/bootstrap',
+    a: 'models/a/a',
+    b: 'models/b/b'    
    }   
 
 });
