@@ -11,7 +11,7 @@ define([
     // Define some URL routes
     
     routes: {
-      '': 'home',
+      '': 'home2',
       '/users': 'showUsers',
 
       // Default
