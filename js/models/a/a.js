@@ -1,21 +1,26 @@
 define(function(){
 
-	return {
-		name : '',
-		quotes : [],
-		setName : function(n){
-			name = n;
+	return{
+	 	v1 : ['variable'],
+		v2 : 20,
+		v3 : {},
+	 	setV1 : function(v1){
+			this.v1.push(v1);
 		},
-		getName : function(){
-			return name;
+		setV2 : function(v2){
+			this.v2=v2;
 		},
-		setQuotes : function(q){
-			this.quotes.push(q);
+		setV3 : function(v3){
+			this.v3=v3;
 		},
-		Speak : function(){
-			return this.quotes;
+	 	getV1 : function(){
+			return this.v1;
+		}, 
+	 	getV2 : function(){
+			return this.v2;
+		},
+	 	getV3 : function(){
+			return this.v3;
 		}
 	}
 });
-
-

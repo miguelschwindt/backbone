@@ -1,23 +1,26 @@
-define(['a'],function(a){
+define(function(){
 
-	return {
-		name : '',
-		quotes : [],
-		v1='var1',
-		v2='var2',
-		v3='var3' 
-		setName : function(n){
-			a.setName("Seteado desde B");
-			name = n;
+	return{
+	 	v1:'var1',
+		v2:'var2',
+		v3: [],
+	 	setV3 : function(v1){
+			this.v1.push(v1);
 		},
-		getName : function(){
-			return name;
+		setV2 : function(v2){
+			this.v2=v2;
 		},
-		setQuotes : function(q){
-			this.quotes.push(q);
+		setV1 : function(v3){
+			this.v3=v3;
 		},
-		Speak : function(){
-			return this.quotes;
+	 	getV1 : function(){
+			return this.v1;
+		}, 
+	 	getV2 : function(){
+			return this.v2;
+		},
+	 	getV3 : function(){
+			return this.v3;
 		}
 	}
 });

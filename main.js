@@ -15,16 +15,32 @@ require.config({
    }   
 
 });
-require(['jquery','a'], function($,item){  
-  item.setName("RequireJS for loading");
-  console.log("Cargo A");
-  $('#resultado').html(item.getName()+"<br>");
-  
-  require(['b'], function(b){
-    b.setName("Soy B");
-    console.log("Cargo B");
-    $('#resultado').append(item.getName());
+require(['jquery','a'], function($,a){  
 
-  });
+  console.log(a.getV1());
+  a.setV1('aaa');
+  console.log(a.getV1());
+  a.setV1(120);
+  console.log(a.getV1());
+  var obj={
+    a1 : ['var1',23],
+    a2: ['var2',46]
+   }
+  a.setV1(obj);
+  console.log(a.getV1());
+  variable = a.getV1()[3].a2[1];
+  console.log(variable);
+  if (a.getV2()===20) {
+    console.log("Ok.");
+  }else{
+    console.log('No');
+  }
+  a.setV2('20');
+  if (a.getV2()===20) {
+    console.log("Ok.");
+  }else{
+    console.log('No');
+  }
+
 
 });
