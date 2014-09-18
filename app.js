@@ -4,6 +4,7 @@ define(['modernizr'],function(modernizr){
 		quotes : [], 
 		setName : function(n){
 			name = n;
+			console.log("Seteando Name para App");
 		},
 		getName : function(){
 			return name;
