@@ -42,5 +42,9 @@ require(['jquery','a'], function($,a){
     console.log('No');
   }
 
-
+//practica seteando en b
+require(['b'], function(b){ 
+  b.setV2(['variableDeB']);
+  console.log(b.getV2());
+});
 });
