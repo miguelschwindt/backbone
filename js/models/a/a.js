@@ -33,6 +33,27 @@ define(function(){
 		},
 		getJson : function(){
 			return this.json;
+		},
+		getAjaxJson : function(){
+			data='q=html5';
+			url ='http://tweetproxy.ap01.aws.af.cm/search?'
+			$.ajax({
+  					url: url+data,
+					
+					type: 'GET',
+					dataType: 'jsonp',
+					success: function(datos){
+						console.log(datos);
+					},
+					error: function(datos){
+						console.log(datos);
+					},
+					complete: function(datos){
+						console.log(datos);
+						return datos;
+					}
+					
+					});
 		}
 	}
 });
