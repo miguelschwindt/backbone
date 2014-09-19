@@ -42,6 +42,8 @@ require(['jquery','a'], function($,a){
     console.log('No');
   }
   console.log(a.getJson());
-  console.log(JSON.stringify(a.getJson()));
+  obj=JSON.stringify(a.getJson());
+  console.log(obj);
+  console.log(JSON.parse(obj));
 
 });
