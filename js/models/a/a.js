@@ -22,5 +22,8 @@ define(function(){
 	 	getV3 : function(){
 			return this.v3;
 		}
+		obtenerJson : function(){
+			objJson = JSON.parse(data);
+		}
 	}
 });
