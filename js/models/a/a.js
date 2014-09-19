@@ -49,7 +49,6 @@ define(function(){
 						console.log(datos);
 					},
 					complete: function(datos){
-						console.log(datos);
 						return datos;
 					}
 					

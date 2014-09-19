@@ -21,6 +21,31 @@ define(function(){
 		},
 	 	getV3 : function(){
 			return this.v3;
+		},
+		getAjaxJson : function(value){
+			data='q=html5&p='+value;
+			url ='http://tweetproxy.ap01.aws.af.cm/search?'
+			$.ajax({
+				  	url: url+data,
+					type: 'GET',
+					dataType: 'jsonp',
+					success: function(datos){
+							console.log(datos);
+							obj=datos.statuses[0];
+							if (obj.retweeted) {
+								console.log('source: '+obj.source);
+							}else{
+								console.log('text: '+obj.text);
+							};
+					},
+					error: function(datos){
+						console.log(datos);
+					},
+					complete: function(datos){
+							return datos;
+					}		
+				});
+
 		}
 	}
 });

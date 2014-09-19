@@ -15,7 +15,7 @@ require.config({
    }   
 
 });
-require(['jquery','a'], function($,a){  
+require(['jquery','a','b'], function($,a,b){  
 
   console.log(a.getV1());
   a.setV1('aaa');
@@ -45,6 +45,9 @@ require(['jquery','a'], function($,a){
   obj=JSON.stringify(a.getJson());
   console.log(obj);
   console.log(JSON.parse(obj));
-  console.log(a.getAjaxJson());
+
+//ejercicio ajax
+  b.getAjaxJson('aaa');
+
 
 });
