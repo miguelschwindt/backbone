@@ -1,9 +1,18 @@
+
 define(function(){
 
 	return{
 	 	v1 : ['variable'],
 		v2 : 20,
 		v3 : {},
+		json : {"e1" : "elemento1",
+				"e2" : 125,
+				"e3" : [{"k1" : "par1"},
+						{"k2" : "par2"},	
+						{"k3" : "par3"},
+						{"k4" : "par4"},
+						{"k5" : "par5"}
+						] },
 	 	setV1 : function(v1){
 			this.v1.push(v1);
 		},
@@ -21,9 +30,9 @@ define(function(){
 		},
 	 	getV3 : function(){
 			return this.v3;
-		}
-		obtenerJson : function(){
-			objJson = JSON.parse(data);
+		},
+		getJson : function(){
+			return this.json;
 		}
 	}
 });
