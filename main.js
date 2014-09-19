@@ -48,6 +48,17 @@ require(['jquery','a','b'], function($,a,b){
 
 //ejercicio ajax
   b.getAjaxJson('aaa');
+//ejercicio html jquery
+
+  var aux= $('#input').val();
+  console.log(aux);
+  $('#boton').on('click',function(){
+    aux= $('#input').val();
+    console.log(aux);
+    b.setV2(aux);
+    $('#resultado').html(b.getV2());
+  });
+
 
 
 });
