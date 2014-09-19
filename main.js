@@ -41,7 +41,7 @@ require(['jquery','a'], function($,a){
   }else{
     console.log('No');
   }
-
   console.log(a.getJson());
+  console.log(JSON.stringify(a.getJson()));
 
 });
