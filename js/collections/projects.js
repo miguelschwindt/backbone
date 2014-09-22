@@ -1,10 +1,12 @@
 // Filename: collections/projects
-define([
+define(
+  [
   'underscore',
   'backbone',
   // Pull in the Model module from above
   'models/projects'
-], function(_, Backbone, ProjectModel){
+  ], 
+  function(_, Backbone, ProjectModel){
   var ProjectCollection = Backbone.Collection.extend({
     model: ProjectModel
   });

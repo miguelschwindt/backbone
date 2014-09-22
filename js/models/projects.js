@@ -5,7 +5,9 @@ define([
 ], function(_, Backbone){
   var ProjectModel = Backbone.Model.extend({
     defaults: {
-      name: "Harry Potter"
+      name: "Harry Potter",
+      propiedad1: "prop1",
+      propiedad2: "prop2"
     }
   });
   // Return the model for the module

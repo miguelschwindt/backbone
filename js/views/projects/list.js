@@ -17,6 +17,9 @@ define([
       console.log('view.list');
       var compiledTemplate = _.template( projectsListTemplate, { name: "Ginger Kid"} );
       this.$el.html('<h1>Projects</h1>');
+      this.projectsModels= new ProjectsModels; 
+      this.projectsModels.set('propiedad1', "hola");
+      console.log(this.projectsModels.get('propiedad1'))
     }
   });
   // Returning instantiated views can be quite useful for having "state"
