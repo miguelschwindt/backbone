@@ -3,7 +3,7 @@ define([
   'underscore',
   'backbone',
   // Pull in the Model module from above
-  'models/project'
+  'models/projects'
 ], function(_, Backbone, ProjectModel){
   var ProjectCollection = Backbone.Collection.extend({
     model: ProjectModel
