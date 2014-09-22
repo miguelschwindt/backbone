@@ -19,8 +19,17 @@ define([
 
     appView: function(){
       console.log('router.appView');
+      
+    },
+
+    showProjects: function(){
+      console.log('paso por projects');
       var projectListView = new ProjectListView();
     },
+    showUsers: function(){
+      console.log('soy user');
+      var userListView = new UserListView;
+    }
 
 
   });
