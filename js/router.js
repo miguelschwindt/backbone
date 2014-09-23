@@ -4,16 +4,23 @@ define([
   'underscore',
   'backbone',
   'views/projects/list',
-  'views/users/list'
-], function($, _, Backbone, ProjectListView, UserListView){
+  'views/users/list',
+  'views/projects/menu1',
+  'views/projects/menu1item2',
+  'views/users/menu2',
+  'views/users/menu2item2'
+], function($, _, Backbone, ProjectListView, UserListView, ProjectMenuView, SegundoItemP,
+            UserMenuView, SegundoItemU){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
       '':       'appView',
       'projects': 'showProjects',
-      'menu1': 'showProjectsMenu',
+      'menu1Item1': 'showProjectsMenu',
+      'menu1Item2': 'showProjectsMenu2',
       'users': 'showUsers',
-      'menu2': 'showUsersMenu',
+      'menu2Item1': 'showUsersMenu',
+      'menu2Item2': 'showUsersMenu2',
 
       // Default
       '*actions': 'defaultAction'
@@ -29,8 +36,14 @@ define([
       var projectListView = new ProjectListView();
     },
     showProjectsMenu: function(){
-      console.log('cargo el menu de project');
-      var projectMenu = new ProjectListView();
+      console.log('cargo el menu de project1');
+      var projectMenu = new ProjectMenuView;
+
+    },
+    showProjectsMenu2: function(){
+      console.log('cargo el menu de project2');
+      var segundoItem = new SegundoItemP;
+
     },
     showUsers: function(){
       console.log('soy user');
@@ -38,10 +51,13 @@ define([
     },
 
     showUsersMenu: function(){
-      console.log('cargo el menu de user');
-      var usersMenu = new UserListView();
-    }
-
+      console.log('cargo el menu de user1');
+      var usersMenu = new UserMenuView;
+    },
+    showUsersMenu2: function(){
+      console.log('cargo el menu de user2');
+      var segundoItemU = new SegundoItemU;
+    }    
 
   });
 
