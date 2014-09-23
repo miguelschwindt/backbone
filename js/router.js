@@ -11,7 +11,9 @@ define([
       // Define some URL routes
       '':       'appView',
       'projects': 'showProjects',
+      'menu1': 'showProjectsMenu',
       'users': 'showUsers',
+      'menu2': 'showUsersMenu',
 
       // Default
       '*actions': 'defaultAction'
@@ -26,9 +28,18 @@ define([
       console.log('paso por projects');
       var projectListView = new ProjectListView();
     },
+    showProjectsMenu: function(){
+      console.log('cargo el menu de project');
+      var projectMenu = new ProjectListView();
+    },
     showUsers: function(){
       console.log('soy user');
       var userListView = new UserListView;
+    },
+
+    showUsersMenu: function(){
+      console.log('cargo el menu de user');
+      var usersMenu = new UserListView();
     }
 
 

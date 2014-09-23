@@ -19,7 +19,9 @@ define([
       this.$el.html('<h1>Projects</h1>');
       this.projectsModels= new ProjectsModels; 
       this.projectsModels.set('propiedad1', "hola");
-      console.log(this.projectsModels.get('propiedad1'))
+      console.log(this.projectsModels.get('propiedad1'));
+      this.projectsModels.set('propiedad2', "hola");
+      console.log(this.projectsModels.get('propiedad2'));
     }
   });
   // Returning instantiated views can be quite useful for having "state"
