@@ -1,5 +1,5 @@
 <h1>Projects</h1>
 
-<% _.each(this.projectsModels,function(model) {  %>
-<%= model.get('propiedad2') %>
+<% _.each(this.projectsCollection.models,function(model) {  %>
+<%= model.get('name') %>
 <%         }); %>
