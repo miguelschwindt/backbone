@@ -5,6 +5,7 @@ define([
   'backbone',
   // Pull in the Model module from above
   'models/users'
+
 ], function(_, Backbone, UserModel){
   var UserCollection = Backbone.Collection.extend({
     model: UserModel
