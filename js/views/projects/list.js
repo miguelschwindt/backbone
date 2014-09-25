@@ -30,11 +30,12 @@ define([
       this.projectsModels= new ProjectsModels; 
       this.projectsModels.set('propiedad1', "hola");
       this.projectsModels.set('propiedad2', "hola");
+      this.projectsCollection = new ProjectsCollection();
       this.render();    
       },
     
     render: function(){
-      this.$el.html(this.template);
+      this.$el.html(this.template(this.projectsCollection.models));
       return this;
     },
 
@@ -43,12 +44,8 @@ define([
       this.projectsCollection = new ProjectsCollection();
       this.projectsCollection.add(data);
       console.log('boton funcionando');
-      this.$el.html(this.template(this.projectsCollection.models));
-      
-      return this;
+      this.render();
     }
-
-
 
   });
  
