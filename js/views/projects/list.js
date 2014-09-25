@@ -28,10 +28,12 @@ define([
     },
 
     initialize: function(){
-      _.bindAll(this,'listarProject');//"ligo" los eventos mediante underscore, cada evento que use lo pongo aca
+      _.bindAll(this,'listarProject');//"ligo" los eventos mediante underscore, 
+      //cada evento que use lo pongo aca
       console.log('view.list');
       this.$el.html('<h1>Projects</h1>');
-      this.projectsModels= new ProjectsModels; //creo el modelo que voy a usar y lo seteo con propiedades simples
+      this.projectsModels= new ProjectsModels; //creo el modelo que voy a usar 
+      //y lo seteo con propiedades simples
       this.projectsModels.set('propiedad1', "hola");
       this.projectsModels.set('propiedad2', "hola");
       //creo la coleccion vacia para pasarla al render, 
@@ -43,6 +45,7 @@ define([
     
     render: function(){
       //si no hay evento del boton la coleccion que le paso es vacia
+      
       this.$el.html(this.template(this.projectsCollection.models));
 
       return this;
@@ -51,7 +54,11 @@ define([
     listarProject: function(){
       //creo el objeto data para agregarselo a la coleccion 
       //y luego renderizo la vista si hay evento del boton esta se actualiza
-      var data = [PrimerModelo,SegundoModelo];
+      var data = [
+      {id: 01, name: "Juan", age: 21, city: "NY"},
+       {id: 03, name: "Pedro", age: 30, city: "TX"},
+       {id: 25, name: "Sofia", age: 52, city: "LA"}];
+
       this.projectsCollection = new ProjectsCollection();
       this.projectsCollection.add(data);
       console.log('boton funcionando');

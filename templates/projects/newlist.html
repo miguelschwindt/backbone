@@ -2,7 +2,18 @@
 
 <button id="listarProject" value="hola">Mostrar Collection</button>
 
-
-<% 		_.each(this.projectsCollection.models,function(model) {  %>
-	<%= '<h2>'+model.get('name')+'</h2>'%>
-	<%         }); %>
+<div id="addTable">
+<table>
+  <tr>
+    <th>ID</th><th>Name</th><th>Age</th><th>City</th>
+  </tr>
+  <% _.each(this.projectsCollection.models,function(model) {  %>
+    <tr>
+     <td><%= model.get('id') %></td>
+     <td><%= model.get('name') %></td>
+     <td><%= model.get('age') %></td>
+     <td><%= model.get('city') %></td>
+    </tr>
+  <% }); %>
+</table>
+</div>
