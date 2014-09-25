@@ -15,11 +15,11 @@ define([
     template: _.template( projectsListTemplate),
     
     initialize: function(){
-      console.log('CARGO LA VISTA DEL SEGUNDO ITEM');
+     //CARGO LA VISTA DEL SEGUNDO ITEM';
       this.render();
     },
 
-    render: function(){
+    render: function(){//compilo el template y le agrego el nuevo item con jquery
       var compiledTemplate = this.template( { name: "Ginger Kid"} );
       this.$el.html('<h3>ITEM 2</h3>');
     }

@@ -15,18 +15,14 @@ define([
     template: _.template( projectsListTemplate),
     
     initialize: function(){
-      console.log('CARGO LA VISTA DEL MENU');
+      //CARGO LA VISTA DEL MENU
       this.render();
     },
-
+//compila el template que en este caso es el index donde va a cargar las cosas
     render: function(){
       var compiledTemplate = this.template( { name: "Ginger Kid"} );
-      
-      this.$el.html('<h3>ITEM 1</h3>');
-      //$("#container").html('<h3>ITEM 1</h3>');
-      //document.getElementById('container').html('<h3>ITEM 1</h3>');
-
-      this.$el.append('<h4>Sub ITEM</h4>');
+      this.$el.html('<h3>ITEM 1</h3>');//agrego un item
+      this.$el.append('<h4>Sub ITEM</h4>');//concateno el subitem
 
     }
   });

@@ -5,6 +5,7 @@ define([
   'backbone',
   'views/projects/list',
   'views/users/list',
+  //vistas creadas para desplegar el menu correspondientea cada una
   'views/projects/menu1',
   'views/projects/menu1item2',
   'views/users/menu2',
@@ -25,44 +26,46 @@ define([
       // Default
       '*actions': 'defaultAction'
     },
-
+//con el router lo que hago es "guiarlo" por donde se tiene que ejecutar, es decir 
+//en el caso de los menues o sus items llama al constructor aca y los crea en las vistas
+//correspondientes  
     appView: function(){
       console.log('router.appView');
       
     },
 
     showProjects: function(){
-      console.log('paso por projects');
+      //cargo projects
       var projectListView = new ProjectListView();
     },
     showProjectsMenu: function(){
-      console.log('cargo el menu de project1');
+      //cargo el menu de project1
       var projectMenu = new ProjectMenuView;
 
     },
     showProjectsMenu2: function(){
-      console.log('cargo el menu de project2');
+      //cargo el menu de project2'
       var segundoItem = new SegundoItemP;
 
     },
     showUsers: function(){
-      console.log('soy user');
+      //muestra user
       var userListView = new UserListView;
     },
 
     showUsersMenu: function(){
-      console.log('cargo el menu de user1');
+      //cargo el menu de user1
       var usersMenu = new UserMenuView;
     },
     showUsersMenu2: function(){
-      console.log('cargo el menu de user2');
+      //cargo el menu de user2
       var segundoItemU = new SegundoItemU;
     }    
 
   });
 
   var initialize = function(){
-    console.log('router.initialize');
+    //router.initialize
     var app_router = new AppRouter;
     Backbone.history.start();
   };
