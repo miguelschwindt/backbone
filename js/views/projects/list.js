@@ -55,12 +55,13 @@ define([
       //creo el objeto data para agregarselo a la coleccion 
       //y luego renderizo la vista si hay evento del boton esta se actualiza
       var data = [
-      {id: 01, name: "Juan", age: 21, city: "NY"},
+       {id: 01, name: "Juan", age: 21, city: "NY"},
        {id: 03, name: "Pedro", age: 30, city: "TX"},
        {id: 25, name: "Sofia", age: 52, city: "LA"}];
 
       this.projectsCollection = new ProjectsCollection();
-      this.projectsCollection.add(data);
+      var dataFiltrado= _.where(data, {city:"NY"});
+      this.projectsCollection.add(dataFiltrado);
       console.log('boton funcionando');
       this.render();
     }
