@@ -8,7 +8,13 @@ define([
 ], function(_, Backbone, AnotherModel2){
   var UserCollection = Backbone.Collection.extend({
   //le doy la funcionalidad de backbone de colleccion con el extend
-    model: AnotherModel2
+    model: AnotherModel2,
+  
+  setModel: function(model){
+  	this.model(model);
+  }
+
+
   });
   // You don't usually return a collection instantiated
   return UserCollection;
