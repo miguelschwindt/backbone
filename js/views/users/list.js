@@ -18,7 +18,7 @@ define([
     
     initialize: function(){
       
-  
+      this.listenTo(this.SegundoModelo, 'change', this.render());
       console.log('view.list');
       var compiledTemplate = _.template( usersListTemplate, {name: "Ginger Kid"});
       this.$el.html('<h1>User</h1>');
@@ -40,7 +40,8 @@ define([
     }
   });
 
-  
+  var userListView = new UserListView({model: SegundoModelo});
+      userListView.remove(); 
   return UserListView;
 
 });
