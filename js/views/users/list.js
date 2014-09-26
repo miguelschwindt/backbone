@@ -6,11 +6,10 @@ define([
   // Pull in the Collection module from above
   'collections/projects',
   'text!/templates/users/list.html',
-  'models/AnotherModel',
   'models/AnotherModel2',
   'models/users'
 
-], function($, _, Backbone, UsersCollection, usersListTemplate, PrimerModelo,
+], function($, _, Backbone, UsersCollection, usersListTemplate,
             SegundoModelo, UsersModels){
   
   var UserListView = Backbone.View.extend({
@@ -30,16 +29,17 @@ define([
       console.log(this.usersModels.get('propiedad2'));
       this.render();
     },
+    setName:function(name){
+      this.SegundoModelo.set('name',"n");
+    },
+    getName:function(){
+      return this.SegundoModelo.get('name');
+    },
     render: function(){
-      this.primerModelo = new PrimerModelo;
-      this.primerModelo.get('name');
-      this.$el.append(this.primerModelo.get('name'),'   ');
-      this.segundoModelo = new SegundoModelo;
-      this.segundoModelo.get('name');
-      this.$el.append('   ',this.segundoModelo.get('name'));
+      return this;
     }
   });
-  // Returning instantiated views can be quite useful for having "state"
+
   
   return UserListView;
 

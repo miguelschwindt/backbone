@@ -4,8 +4,9 @@ define([
   'backbone'
 ], function(_, Backbone){
   var AnotherModel2 = Backbone.Model.extend({
+  	//le doy la funcionalidad de backbone de colecciones
     defaults: {
-      name: "Segundo modelo",
+      name: "User model",
     }
   });
   // Return the model for the module
