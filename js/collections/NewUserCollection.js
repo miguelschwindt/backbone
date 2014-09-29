@@ -12,6 +12,9 @@ define([
   
   setModel: function(model){
   	this.model(model);
+  },
+  addModel: function(model){
+    this.add(model);
   }
 
 
