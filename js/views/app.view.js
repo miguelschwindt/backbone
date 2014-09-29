@@ -3,12 +3,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/appTemplate.html'
-  'views/projects/newlist'
+  'text!/index.html',
+  'views/projects/list',
   'views/users/list'
 ], function($, _, Backbone, appTemplate, ProjectListView, UserListView){
   var AppView = Backbone.View.extend({
     el: $('#appDiv'),
+    initialize: function(){
+      this.render;
+    },
 //$(divDeUser).style.visibility=hidden;
 //para que sea dinamico podria poner esta sentencia cuando salgo de la vista user
 //pero si uso hidden sigue atenta la seccion, si quiero que no este, usar collapse

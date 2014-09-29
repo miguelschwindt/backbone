@@ -17,7 +17,7 @@ define([
   
   var ProjectListView = Backbone.View.extend({
     //defino el objeto con el que voy a trabajar(esta ubicado en index.html)
-    el: $("#container"),
+    el: $("#appDiv"),
     //asi le pongo un nombre al template con el que lo voy a llamar mas abajo
     template: _.template(projectsListTemplate),
     //defino eventos del boton que va a mostrar los modelos cuando haga click,

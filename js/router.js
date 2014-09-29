@@ -33,6 +33,7 @@ define([
     appView: function(){
       console.log('router.appView');
       var appVista = new AppView;
+      this.appVista.initialize;
     },
 
     showProjects: function(){
@@ -68,7 +69,7 @@ define([
   var initialize = function(){
     //router.initialize
 
-    appView();
+    this.appView;
     var app_router = new AppRouter;
     Backbone.history.start();
   };
