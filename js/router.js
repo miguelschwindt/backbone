@@ -3,6 +3,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'views/app.view',
   'views/projects/list',
   'views/users/list',
   //vistas creadas para desplegar el menu correspondientea cada una
@@ -10,12 +11,12 @@ define([
   'views/projects/menu1item2',
   'views/users/menu2',
   'views/users/menu2item2'
-], function($, _, Backbone, ProjectListView, UserListView, ProjectMenuView, SegundoItemP,
+], function($, _, Backbone, AppView, ProjectListView, UserListView, ProjectMenuView, SegundoItemP,
             UserMenuView, SegundoItemU){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      '':       'appView',
+      'app.view':       'appView',
       'projects': 'showProjects',
       'menu1Item1': 'showProjectsMenu',
       'menu1Item2': 'showProjectsMenu2',
@@ -31,7 +32,7 @@ define([
 //correspondientes  
     appView: function(){
       console.log('router.appView');
-      
+      var appVista = new AppView;
     },
 
     showProjects: function(){
@@ -66,6 +67,8 @@ define([
 
   var initialize = function(){
     //router.initialize
+
+    appView();
     var app_router = new AppRouter;
     Backbone.history.start();
   };
