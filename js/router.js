@@ -46,15 +46,14 @@ define([
     showProjects: function(){
       //cargo projects
       this.setUp();//tengo que cargarlo siempre antes de cualquier cosa
-      console.log('paso por aca en el router');
-      //var projectListView = new ProjectListView();
-      
+      console.log('paso por aca en el router');  
       if (this.actualView) {
         this.actualView.hideView();//si esta abierta en la vista actual la cierro (?)
       };
       this.actualView = new ProjectListView;// y si no hay nada creado en la vista lo crea
       
     },
+    //tengo que cargarlo dentro de sus respectivas views
     showProjectsMenu: function(){
       //cargo el menu de project1
       this.setUp();
