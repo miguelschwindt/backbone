@@ -22,6 +22,7 @@ define([
       var compiledTemplate = _.template( appTemplate, data );
       this.$el.append( compiledTemplate );
     },
+    //esto es trabajo del router tengo que ponerlo en show user y eso
     levantarVistaUser:function(){
       this.userListView= new UserListView;
       $('#userDiv').visibility.style=visible;

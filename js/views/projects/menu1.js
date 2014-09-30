@@ -10,7 +10,7 @@ define([
 
   var ProjectMenuView = Backbone.View.extend({
     
-    el: $("#container"),
+    el: $("#projectDiv"),
 
     template: _.template( projectsListTemplate),
     

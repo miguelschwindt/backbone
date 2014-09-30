@@ -14,7 +14,7 @@ define([
   
   var UserListView = Backbone.View.extend({
     
-    el: $("#appDiv"),
+    el: $("#userDiv"),
     template: _.template(usersListTemplate),
     events:  {
       'click button#addUser': 'addUser',
@@ -63,6 +63,9 @@ define([
 //tengo que arreglar la funcion setModel de NewUserCollection par que dispare 
 //el evento del listenTo
 
+    },
+    hideView: function(){
+      this.$el.css('display','none');
     }
   });
 

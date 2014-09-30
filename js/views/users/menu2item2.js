@@ -10,7 +10,7 @@ define([
 
   var segundoItemU = Backbone.View.extend({
     
-    el: $("#container"),
+    el: $("#userDiv"),
 
     template: _.template( UsersListTemplate),
     

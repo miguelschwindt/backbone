@@ -16,7 +16,8 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      'app.view':       'appView',
+      '':       'appView',
+      //no va nada asi carga de una la view
       'projects': 'showProjects',
       'menu1Item1': 'showProjectsMenu',
       'menu1Item2': 'showProjectsMenu2',
@@ -30,38 +31,56 @@ define([
 //con el router lo que hago es "guiarlo" por donde se tiene que ejecutar, es decir 
 //en el caso de los menues o sus items llama al constructor aca y los crea en las vistas
 //correspondientes  
-    appView: function(){
+    appView: function(){//todavia no pasa por aca
       console.log('router.appView');
       var appVista = new AppView;
-      this.appVista.initialize;
+
+    },
+    setUp: function(){
+      if (!this.ppalView) {
+        this.ppalView = new AppView;
+      };
     },
 
     showProjects: function(){
       //cargo projects
+      console.log('paso por aca en el router');
       var projectListView = new ProjectListView();
+      this.setUp;
+      if (this.actualView) {
+        this.projectListView.hideView;//si esta abierta en la vista actual la cierro (?)
+      };
+      this.actualView = new ProjectListView;// y si no hay nada creado en la vista lo crea
+      
     },
     showProjectsMenu: function(){
       //cargo el menu de project1
       var projectMenu = new ProjectMenuView;
+      this.setUp;
 
     },
     showProjectsMenu2: function(){
       //cargo el menu de project2'
       var segundoItem = new SegundoItemP;
+      this.setUp;
 
     },
     showUsers: function(){
       //muestra user
+      //si existe una vista cargada en la vista de usuario llamo a un metodo cerrar vista
       var userListView = new UserListView;
+      this.setUp;
     },
 
     showUsersMenu: function(){
       //cargo el menu de user1
       var usersMenu = new UserMenuView;
+      this.setUp;
     },
     showUsersMenu2: function(){
       //cargo el menu de user2
       var segundoItemU = new SegundoItemU;
+      this.setUp;
     }    
 
   });
@@ -69,8 +88,8 @@ define([
   var initialize = function(){
     //router.initialize
 
-    this.appView;
-    var app_router = new AppRouter;
+   
+
     Backbone.history.start();
   };
   return {
