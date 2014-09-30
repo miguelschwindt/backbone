@@ -10,6 +10,7 @@ define([
   var AppView = Backbone.View.extend({
     el: $('#appDiv'),
     initialize: function(){
+      console.log('inicializa app.view');
       this.render;
     },
 //$(divDeUser).style.visibility=hidden;
@@ -23,20 +24,7 @@ define([
       this.$el.append( compiledTemplate );
     },
     //esto es trabajo del router tengo que ponerlo en show user y eso
-    levantarVistaUser:function(){
-      this.userListView= new UserListView;
-      $('#userDiv').visibility.style=visible;
-    },
-    levantarVistaProject:function(){
-      this.projectListView= new ProjectListView;
-      $('#projectDiv').visibility.style=visible;
-    },
-    esconderVistaUser: function(){
-      $('#userDiv').visibility.style=collapse;
-    },
-    esconderVistaUser: function(){
-      $('#projectDiv').visibility.style=collapse;
-    }
+
 
   });
   

@@ -33,8 +33,9 @@ define([
 //correspondientes  
     appView: function(){//todavia no pasa por aca
       console.log('router.appView');
-      var appVista = new AppView;
+      this.setUp();
 
+//llamo a setUp
     },
     setUp: function(){
       if (!this.ppalView) {
@@ -44,34 +45,35 @@ define([
 
     showProjects: function(){
       //cargo projects
+      this.setUp;//tengo que cargarlo siempre antes de cualquier cosa
       console.log('paso por aca en el router');
-      var projectListView = new ProjectListView();
-      this.setUp;
+      //var projectListView = new ProjectListView();
+      
       if (this.actualView) {
-        this.projectListView.hideView;//si esta abierta en la vista actual la cierro (?)
+        this.actualView.hideView();//si esta abierta en la vista actual la cierro (?)
       };
       this.actualView = new ProjectListView;// y si no hay nada creado en la vista lo crea
       
     },
     showProjectsMenu: function(){
       //cargo el menu de project1
-      var projectMenu = new ProjectMenuView;
       this.setUp;
-
+      var projectMenu = new ProjectMenuView;
     },
     showProjectsMenu2: function(){
       //cargo el menu de project2'
-      var segundoItem = new SegundoItemP;
       this.setUp;
-
+      var segundoItem = new SegundoItemP;
     },
     showUsers: function(){
       //muestra user
-      //si existe una vista cargada en la vista de usuario llamo a un metodo cerrar vista
-      var userListView = new UserListView;
       this.setUp;
+      if (this.actualView) {
+        this.actualView.hideView();
+      };
+      this.actualView = new UserListView;
+      
     },
-
     showUsersMenu: function(){
       //cargo el menu de user1
       var usersMenu = new UserMenuView;
@@ -87,9 +89,7 @@ define([
 
   var initialize = function(){
     //router.initialize
-
-   
-
+    var appRouter = new AppRouter;
     Backbone.history.start();
   };
   return {
