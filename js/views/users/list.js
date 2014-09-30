@@ -21,7 +21,7 @@ define([
     },
 
     initialize: function(){
-      _.bindAll(this,'render','addUser');
+      _.bindAll(this,'render','addUser','hideView');
       this.segundoModelo = new SegundoModelo;
       this.usersModels= new UsersModels; 
       this.userCollection =  new UserCollection;

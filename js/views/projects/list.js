@@ -28,7 +28,7 @@ define([
     },
 
     initialize: function(){
-      _.bindAll(this,'listarProject');//"ligo" los eventos mediante underscore, 
+      _.bindAll(this,'listarProject','hideView');//"ligo" los eventos mediante underscore, 
       //cada evento que use lo pongo aca
       console.log('view.list');
       this.$el.html('<h1>Projects</h1>');
@@ -64,6 +64,9 @@ define([
       this.projectsCollection.add(dataFiltrado);
       console.log('boton funcionando');
       this.render();
+    },
+    showView: function(){
+      this.$el.css('display','none');
     },
     hideView: function(){
       this.$el.css('display','none');

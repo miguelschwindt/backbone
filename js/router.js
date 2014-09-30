@@ -45,7 +45,7 @@ define([
 
     showProjects: function(){
       //cargo projects
-      this.setUp;//tengo que cargarlo siempre antes de cualquier cosa
+      this.setUp();//tengo que cargarlo siempre antes de cualquier cosa
       console.log('paso por aca en el router');
       //var projectListView = new ProjectListView();
       
@@ -57,17 +57,17 @@ define([
     },
     showProjectsMenu: function(){
       //cargo el menu de project1
-      this.setUp;
+      this.setUp();
       var projectMenu = new ProjectMenuView;
     },
     showProjectsMenu2: function(){
       //cargo el menu de project2'
-      this.setUp;
+      this.setUp();
       var segundoItem = new SegundoItemP;
     },
     showUsers: function(){
       //muestra user
-      this.setUp;
+      this.setUp();
       if (this.actualView) {
         this.actualView.hideView();
       };
@@ -77,12 +77,12 @@ define([
     showUsersMenu: function(){
       //cargo el menu de user1
       var usersMenu = new UserMenuView;
-      this.setUp;
+      this.setUp();
     },
     showUsersMenu2: function(){
       //cargo el menu de user2
       var segundoItemU = new SegundoItemU;
-      this.setUp;
+      this.setUp();
     }    
 
   });
