@@ -4,7 +4,7 @@ define([
   'backbone',
   'collections/projects',
   'models/projects',
-  'text!/index.html'
+  'text!/templates/projects/newlist.html'
 ], function($, _, Backbone, ProjectsCollection, ProjectsModels, projectsListTemplate){
       console.log('antes de initialize');
 

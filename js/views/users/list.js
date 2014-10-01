@@ -14,7 +14,7 @@ define([
   
   var UserListView = Backbone.View.extend({
     
-    el: $("#userDiv"),
+    el: $("#appDiv"),
     template: _.template(usersListTemplate),
     events:  {
       'click button#addUser': 'addUser',
@@ -65,7 +65,8 @@ define([
 
     },
     hideView: function(){
-      this.$el.css('display','none');
+      //cierra la vista, esto se llama cuando se necesita cargar otra vista nueva
+      this.$('#userDiv').css('display','none');
     }
   });
 

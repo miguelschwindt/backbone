@@ -11,8 +11,8 @@ define([
   'views/projects/menu1item2',
   'views/users/menu2',
   'views/users/menu2item2'
-], function($, _, Backbone, AppView, ProjectListView, UserListView, ProjectMenuView, SegundoItemP,
-            UserMenuView, SegundoItemU){
+], function($, _, Backbone, AppView, ProjectListView, UserListView, ProjectMenuView, 
+  SegundoItemP,UserMenuView, SegundoItemU){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
@@ -38,6 +38,8 @@ define([
 //llamo a setUp
     },
     setUp: function(){
+      //esta funcion se ejecuta al principio de cada vista, antes de creaarla,
+      //si es la primera vez que entra o no hay vista ppal la crea
       if (!this.ppalView) {
         this.ppalView = new AppView;
       };
@@ -48,9 +50,10 @@ define([
       this.setUp();//tengo que cargarlo siempre antes de cualquier cosa
       console.log('paso por aca en el router');  
       if (this.actualView) {
-        this.actualView.hideView();//si esta abierta en la vista actual la cierro (?)
+        this.actualView.hideView();//si hay una vista actual abierta, cierro esa vista actual
       };
-      this.actualView = new ProjectListView;// y si no hay nada creado en la vista lo crea
+      this.actualView = new ProjectListView;
+      //despues de asegurarse que no hay nada en la vista actual crea la vista nueva
       
     },
     //tengo que cargarlo dentro de sus respectivas views

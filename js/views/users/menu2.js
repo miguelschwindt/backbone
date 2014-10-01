@@ -4,7 +4,7 @@ define([
   'backbone',
   'collections/users',
   'models/users',
-  'text!/index.html'
+  'text!/templates/users/list.html'
 ], function($, _, Backbone, UsersCollection, UsersModels, UsersListTemplate){
       console.log('antes de initialize');
 
