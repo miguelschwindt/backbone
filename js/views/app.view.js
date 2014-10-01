@@ -26,11 +26,11 @@ define([
 //y cuando entro poner esta otra
 //$(divDeUser).style.visibility=visible;
     render: function(){
-      var data = {};
-      var compiledTemplate = _.template( appTemplate, data );
-      this.$el.append( compiledTemplate );
-      //this.$el.html(this.template());
-      //return this;
+      //var data = {};
+      //var compiledTemplate = _.template( appTemplate, data );
+      //this.$el.append( compiledTemplate );
+      this.$el.html(this.template());
+      return this;
     } 
 
   });

@@ -14,7 +14,7 @@ define([
   
   var UserListView = Backbone.View.extend({
     
-    el: $("#appDiv"),
+    el: $("#userDiv"),
     template: _.template(usersListTemplate),
     events:  {
       'click button#addUser': 'addUser',

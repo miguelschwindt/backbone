@@ -17,7 +17,7 @@ define([
   
   var ProjectListView = Backbone.View.extend({
     //defino el objeto con el que voy a trabajar(esta ubicado en index.html)
-    el: $("#appDiv"),
+    el: $("#projectDiv"),
     //asi le pongo un nombre al template con el que lo voy a llamar mas abajo
     template: _.template(projectsListTemplate),
     //defino eventos del boton que va a mostrar los modelos cuando haga click,
@@ -69,7 +69,7 @@ define([
       this.$el.css('display','none');
     },
     hideView: function(){
-      this.$('#projectDiv').css('display','none');
+      this.$('projectDiv').css('display','none');
     }
 
 
