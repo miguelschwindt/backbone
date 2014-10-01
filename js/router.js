@@ -56,7 +56,7 @@ define([
 
       //this.actualView = new ProjectListView;
       //despues de asegurarse que no hay nada en la vista actual crea la vista nueva
-      $("#projectDiv").html(this.actualView.el);
+  
 
     },
     //tengo que cargarlo dentro de sus respectivas views
@@ -78,7 +78,7 @@ define([
         this.actualView.hideView();
       };
       this.actualView = new UserListView({el:'#userDiv'});
-      $("#userDiv").html(this.actualView.el);
+    
     },
     showUsersMenu: function(){
       //cargo el menu de user1
