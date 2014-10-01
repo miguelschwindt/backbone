@@ -5,19 +5,14 @@ define([
   'backbone',
   'text!/templates/app.html',
   'views/projects/list',
-  'views/users/list',
-  'views/projects/menu1',
-  'views/projects/menu1item2',
-  'views/users/menu2',
-  'views/users/menu2item2'
-], function($, _, Backbone, appTemplate, ProjectListView, UserListView,ProjectMenuView, 
-  SegundoItemP,UserMenuView, SegundoItemU){
+  'views/users/list'
+], function($, _, Backbone, appTemplate, ProjectListView, UserListView){
   var AppView = Backbone.View.extend({
     el: $('#appDiv'),
     template: _.template(appTemplate),
     initialize: function(){
       console.log('inicializa app.view');
-
+     
       this.render();
     },
 //$(divDeUser).style.visibility=hidden;

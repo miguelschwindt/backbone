@@ -52,10 +52,12 @@ define([
       if (this.actualView) {
         this.actualView.hideView();//si hay una vista actual abierta, cierro esa vista actual
       };
-      this.actualView = new ProjectListView;
+      this.actualView = new ProjectListView({el:'#projectDiv'});
+
+      //this.actualView = new ProjectListView;
       //despues de asegurarse que no hay nada en la vista actual crea la vista nueva
       $("#projectDiv").html(this.actualView.el);
-      
+
     },
     //tengo que cargarlo dentro de sus respectivas views
     showProjectsMenu: function(){
@@ -70,11 +72,12 @@ define([
     },
     showUsers: function(){
       //muestra user
+      //misma funcionalidad de showProjects
       this.setUp();
       if (this.actualView) {
         this.actualView.hideView();
       };
-      this.actualView = new UserListView;
+      this.actualView = new UserListView({el:'#userDiv'});
       $("#userDiv").html(this.actualView.el);
     },
     showUsersMenu: function(){
