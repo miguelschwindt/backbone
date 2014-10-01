@@ -64,6 +64,9 @@ define([
 //el evento del listenTo
 
     },
+    showView: function(){
+      this.$el.css('display','inherit');
+    },
     hideView: function(){
       //cierra la vista, esto se llama cuando se necesita cargar otra vista nueva
       this.$el.css('display','none');

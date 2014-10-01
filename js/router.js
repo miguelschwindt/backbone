@@ -53,7 +53,7 @@ define([
         this.actualView.hideView();//si hay una vista actual abierta, cierro esa vista actual
       };
       this.actualView = new ProjectListView({el:'#projectDiv'});
-
+      this.actualView.showView();
       //this.actualView = new ProjectListView;
       //despues de asegurarse que no hay nada en la vista actual crea la vista nueva
   
@@ -78,7 +78,7 @@ define([
         this.actualView.hideView();
       };
       this.actualView = new UserListView({el:'#userDiv'});
-    
+      this.actualView.showView();
     },
     showUsersMenu: function(){
       //cargo el menu de user1

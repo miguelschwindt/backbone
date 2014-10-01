@@ -66,7 +66,7 @@ define([
       this.render();
     },
     showView: function(){
-      this.$el.css('display','none');
+      this.$el.css('display','inherit');
     },
     hideView: function(){
       this.$el.css('display','none');
