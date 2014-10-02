@@ -1,8 +1,8 @@
 <menu type="toolbar" class="nav">
   <li>
     <menu label="menu" class="nav nav-tabs">
-      <li><a href="#menu1Item1" class="active">Item 1</h5></a></li>
-      <li><a href="#menu1Item2" class="active">Item 2</h5></a></li>
+      <li><a href="#menu1Item1" class="active">Item 1</a></li>
+      <li><a href="#menu1Item2" class="active">Item 2</a></li>
     </menu>
   </li>
 </menu> 
@@ -16,21 +16,23 @@
 
 <button id="addUser">Add User</button>
 <div class="tabla">
-<center><table class="table table-striped table-responsive">
+<table class="table table-striped table-responsive">
   <thead>
   <tr>
     <th>ID</th><th>Name</th><th>Age</th><th>City</th>
   </tr>
   </thead>
-  <tbody>
+  
   <% _.each(this.userCollection.models,function(model) {  %>
+  <tbody>
     <tr>
      <td class="col-xs-3 col-sm-1"><%= model.get('id') %></td>
      <td class="col-xs-3 col-sm-1"><%= model.get('name') %></td>
      <td class="col-xs-3 col-sm-1"><%= model.get('age') %></td>
      <td class="col-xs-3 col-sm-1"><%= model.get('city') %></td>
     </tr>
+    </tbody>
   <% }); %>
-  </tbody>
-</table></center>
+  
+</table>
 </div>
