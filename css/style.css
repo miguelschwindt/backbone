@@ -5,3 +5,19 @@
 table{
 	text-align: center;
 }
+
+.Home{
+	float: left;
+	margin-left: 20px;
+}
+.User{
+	float: left;
+	margin-top: 10px;
+}
+.Project{
+	float: left;
+	margin-top: 10px;
+}
+.active{
+	margin-top: 10px;
+}
