@@ -15,17 +15,21 @@
 <input type="text" id="inputCity" value="inputCity">
 
 <button id="addUser">Add User</button>
-
-<center><table>
+<center><table class="table table-striped table-responsive">
+  <thead>
   <tr>
     <th>ID</th><th>Name</th><th>Age</th><th>City</th>
   </tr>
+  </thead>
+  <tbody>
   <% _.each(this.userCollection.models,function(model) {  %>
     <tr>
-     <td><%= model.get('id') %></td>
-     <td><%= model.get('name') %></td>
-     <td><%= model.get('age') %></td>
-     <td><%= model.get('city') %></td>
+     <td class="col-xs-3 col-sm-1"><%= model.get('id') %></td>
+     <td class="col-xs-3 col-sm-1"><%= model.get('name') %></td>
+     <td class="col-xs-3 col-sm-1"><%= model.get('age') %></td>
+     <td class="col-xs-3 col-sm-1"><%= model.get('city') %></td>
     </tr>
   <% }); %>
+  </tbody>
 </table></center>
+</div>
