@@ -1,29 +1,25 @@
 .centrado{
 	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 70px;
 }
 
-table{
-	text-align: center;
 
+.SubMenu{
+	float: left;
+	margin-top: 7px;
 }
 
-.Home{
-	float: left;
-	margin-left: 20px;
-}
-.User{
-	float: left;
-	margin-top: 10px;
-}
-.Project{
-	float: left;
-	margin-top: 10px;
-}
-.active{
-	margin-top: 10px;
-}
 .tabla{
 	width: 20%;
-	margin-left: 550px;
-}
+	padding-left: 44%;
 
+}
+.metaDiv{
+	padding-top: 50px;	
+	text-align: center;
+}
+.items{
+	padding-left:44%;
+}
